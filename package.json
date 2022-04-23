@@ -2,7 +2,7 @@
   "name": "valid-param",
   "author": "Terrell Finklea <terrell@merciall.com> (https://merciall.com)",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "description": "Convenient method of validating properties of an object as function parameters",
   "main": "index.js",
   "scripts": {
