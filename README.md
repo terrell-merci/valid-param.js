@@ -1,5 +1,9 @@
 # valid-param.js
 Convenient method of validating function parameters when passed as properties of an object (object literal).
+```js
+import ValidParam from './index.js'
+```
+
 
 ```js
 function getAddressBlock(parameters = {}) {
