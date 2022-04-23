@@ -5,7 +5,7 @@ import { throwRequiredParamError, throwTypeError } from './errors.js'
  * @param {object} parameters 
  * @param {object} valid_types <parameter_name: valid_type>
  */
-class ValidParam {
+export default class {
 	constructor(parameters, valid_types) {
 		for (const key in valid_types) {
 			let value = parameters[key]
@@ -30,32 +30,6 @@ class ValidParam {
 		}
 	}
 }
-
-/**
- * Returns a given address formatted as an HTML block.
- * Utilizes the object literal syntax; expects the parameters to be passed as an object {}
- * @param {*} parameters 
- * @returns {string} String with HTML tags included
- */
-function getAddressBlock(parameters = {}) {
-	new ValidParam(parameters, {
-		name: '?string',
-		company_name: '?string',
-		street: 'string',
-		street_2: '?string',
-		city: 'string',
-		state: 'string',
-		zip: 'string|number',
-	})
-
-	return `${parameters.name}<br>${parameters.company_name}<br>${parameters.street}<br>${parameters.street_2}<br>${parameters.city}, ${parameters.state} ${parameters.zip}<br>`
-}
-
-console.log(getAddressBlock({ name: 'James Roberts', company_name: 'Matoaka Rails Inc', street: '1178 Industrial Blvd', city: 'Matoaka', state: 'WV', zip: 24736 }))
-
-
-
-
 
 function isNullable(str) {
 	return str.charAt(0) == '?' || str.includes('null')
@@ -87,14 +61,3 @@ function isValid(str, types) {
 
 	return bool
 }
-
-
-
-
-
-
-
-// --------------------------------------------------------------------------------------------
-// js/helpers/error.js
-// (Normally I would place error functions (if used) in their own js file for reuse)
-// --------------------------------------------------------------------------------------------
