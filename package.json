@@ -1,0 +1,25 @@
+{
+  "name": "valid-param",
+  "author": "Terrell Finklea <terrell@merciall.com> (https://merciall.com)",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Convenient method of validating properties of an object as function parameters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrell-merci/valid-param.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "validation",
+    "parameters"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terrell-merci/valid-param.js/issues"
+  },
+  "homepage": "https://github.com/terrell-merci/valid-param.js#readme"
+}

@@ -1,0 +1,17 @@
+/**
+ * Throws a Required Parameter error
+ * @param {string} required_param
+ */
+export function throwRequiredParamError(required_param) {
+	throw new Error(`Missing required parameter '${required_param}'`)
+}
+
+/**
+ * Throws a Type error
+ * @param {string} param 
+ * @param {string} valid_type 
+ * @param {string} given_type 
+ */
+export function throwTypeError(param, valid_type, given_type) {
+	throw new Error(`Expected type ${valid_type.toString().replace(',', '|')} for parameter '${param}'; received type ${given_type}`)
+}
