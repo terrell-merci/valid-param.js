@@ -26,16 +26,15 @@ function getProfileBlock(parameters = {}) {
 	return `${name}<br>${age}`
 }	
 ```
-### Assigning types
+#### Assigning types
 Paremeter types are assigned inside of the 'type assignment' object. The key should refer to the paramenter name while the value refers to that parameter's type assignment.
 ```js
 	{
 		age: 'number',
 	}
 ``` 
-### Setting defaults
-#### Default types
-If you would like to set a default type for non-typed parameters, you can you simply add a `default` property to the 'type assignment' object.
+##### Default types
+If you would like to assign a default type to non-typed parameters, you can you simply add a `default` property to the 'type assignment' object.
 ```js
 	new ValidParam(parameters, {
 		name: 'string',
