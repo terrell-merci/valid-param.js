@@ -26,7 +26,8 @@ function getProfileBlock(parameters = {}) {
 	return `${name}<br>${age}`
 }	
 ```
-### Set parameter type
+### Assigning parameter types
+Paremeter types are assigned inside of the 'type assignment' object. The key should refer to the paramenter name while the value refers to that parameter's type assignment.
 ```js
 	age: 'number',
 ``` 
@@ -37,7 +38,7 @@ If you would like to set a default type for non-typed parameters, you can you si
 	new ValidParam(parameters, {
 		name: 'string',
 		age: 'number',
-		default: '?sring'
+		default: '?string'
 	})
 ```
 Any parameter (or object-property) that is not explicitly typed in the 'type assignment' object will default to this setting. If a default is not set, all non-typed paramaters will be ignored.
