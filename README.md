@@ -15,7 +15,7 @@ npm install valid-param.js
 ### Tip
 valid-param.js was designed with the intent of validating function parameters passed as properties of an object, but really can be used to validate properties of any object.
 ## Use
-Simply call the `ValidParam` class and pass in the parameters object as the first argument, along with a 'type assignment' object as the second argument
+Simply call the `ValidParam` class and pass in the parameters object as the first argument, along with a 'type assignment' object as the second argument. The 'type assignment' object associates each expected parameter with an acceptable type. If any parameter value is passed with an incorrect type, the appropriate error is thrown.
 ```js
 function getProfileBlock(parameters = {}) {
 	new ValidParam(parameters, {
