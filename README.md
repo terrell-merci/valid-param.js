@@ -43,9 +43,9 @@ If you would like to assign a default type to non-typed parameters, you can you 
 	})
 ```
 Any parameter (or object-property) that is not explicitly typed in the 'type assignment' object will default to this setting. If a default is not set, all non-typed paramaters will be ignored.
-#### Parameter defaults
+##### Parameter defaults
 Parameter (or object-property) 
-### Misc
+#### Misc
 ```js
 function getAddressBlock(parameters = {}) {
 	new ValidParam(parameters, {
