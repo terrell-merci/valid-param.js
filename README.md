@@ -26,7 +26,7 @@ function getProfileBlock(parameters = {}) {
 	return `${name}<br>${age}`
 }	
 ```
-#### Assigning types
+### Assigning types
 Paremeter types are assigned inside of the 'type assignment' object. The key should refer to the paramenter name while the value refers to that parameter's type assignment.
 ```js
 	{
@@ -36,16 +36,29 @@ Paremeter types are assigned inside of the 'type assignment' object. The key sho
 ##### Default types
 If you would like to assign a default type to non-typed parameters, you can you simply add a `default` property to the 'type assignment' object.
 ```js
-	new ValidParam(parameters, {
-		name: 'string',
+	{
 		age: 'number',
-		default: '?string'
-	})
+		default: 'string'
+	}
 ```
 Any parameter (or object-property) that is not explicitly typed in the 'type assignment' object will default to this setting. If a default is not set, all non-typed paramaters will be ignored.
-##### Parameter defaults
-Parameter (or object-property) 
-#### Misc
+##### Multiple types
+To assign multiple acceptable types, simply separate each type with a `|` mark.
+```js
+	{
+		age: 'string|number',
+	}
+```
+##### Allowing null values
+##### Allowing undefined values
+##### Assigning 'mixed' and 'any'
+If parameter can be of any type, including `null` or `undefined`, programmer may use the `mixed` or `any` types. Either will allow any value through, regardless of type.
+```js
+	{
+		age: 'mixed',
+	}
+``` 
+### Adjusting settings
 ```js
 function getAddressBlock(parameters = {}) {
 	new ValidParam(parameters, {
