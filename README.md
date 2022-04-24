@@ -29,7 +29,9 @@ function getProfileBlock(parameters = {}) {
 ### Assigning parameter types
 Paremeter types are assigned inside of the 'type assignment' object. The key should refer to the paramenter name while the value refers to that parameter's type assignment.
 ```js
-	age: 'number',
+	{
+		age: 'number',
+	}
 ``` 
 ### Setting defaults
 #### Default types
