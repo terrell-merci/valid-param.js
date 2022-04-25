@@ -1,4 +1,4 @@
-import { throwRequiredParamError, throwTypeError } from './errors.js'
+import { throwRequiredParamError, throwTypeError } from './src/errors.js'
 
 /**
  * Validates parameters against a given object of valid types. Throws relevant error if parameter is invalid
