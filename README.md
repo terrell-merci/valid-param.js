@@ -63,7 +63,7 @@ If there is only a single acceptable type, then simply add `?` at the beginning 
 	}
 ```
 #### Assigning `mixed` and `any`
-If parameter can be of any type, including `null`, programmer may use the `mixed` or `any` types. Either will allow any value through, regardless of type.
+If parameter can be of any type, including `null`, programmer may use the `mixed` or `any` types. Either will allow any value through, regardless of type, as long as parameter is defined.
 ```js
 	{
 		age: 'mixed',
