@@ -75,6 +75,7 @@ If parameter can be of any type, including `null`, programmer may use the `mixed
 - `boolean` (or `bool`)
 - `array` (or `arr`)
 - `object` (or `obj`)
+- `mixed` (or `any`)
 
 ## Contribute
 Pull requests are welcomed to this project
