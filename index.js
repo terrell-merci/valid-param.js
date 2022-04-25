@@ -71,6 +71,7 @@ function isValid(str, types) {
 		['array', 'arr'],
 		['object', 'obj'],
 		['null', 'undefined'],
+		['mixed', 'any'],
 	]
 
 	let bool = false
@@ -100,4 +101,6 @@ const isArray = (value) => Array.isArray(value)
 const isObject = (value) => Object.prototype.toString.call(value) === '[object Object]'
 
 const isNull = (value) => !value || typeof value === 'undefined'
+
+const isMixed = (value) => typeof value !== 'undefined'
 
