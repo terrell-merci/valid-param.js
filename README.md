@@ -33,7 +33,7 @@ Paremeter types are assigned inside of the 'type assignment' object. The key sho
 		age: 'number',
 	}
 ``` 
-##### Default types
+#### Default types
 If you would like to assign a default type to non-typed parameters, you can you simply add a `default` property to the 'type assignment' object.
 ```js
 	{
@@ -42,35 +42,32 @@ If you would like to assign a default type to non-typed parameters, you can you 
 	}
 ```
 Any parameter (or object-property) that is not explicitly typed in the 'type assignment' object will default to this setting. If a default is not set, all non-typed paramaters will be ignored.
-##### Multiple types
+#### Multiple types
 To assign multiple acceptable types, simply separate each type with a `|` mark.
 ```js
 	{
 		age: 'string|number',
 	}
 ```
-##### Allowing null values
-##### Allowing undefined values
-##### Assigning 'mixed' and 'any'
-If parameter can be of any type, including `null` or `undefined`, programmer may use the `mixed` or `any` types. Either will allow any value through, regardless of type.
+#### Allowing null values
+A parameter can be made nullable by simply adding the `null` type to the assignment string.
+```js
+	{
+		age: 'string|number|null',
+	}
+```
+If there is only a single acceptable type, then simply add `?` at the beginning of the string.
+```js
+	{
+		age: '?string',
+	}
+```
+#### Assigning `mixed` and `any`
+If parameter can be of any type, including `null`, programmer may use the `mixed` or `any` types. Either will allow any value through, regardless of type.
 ```js
 	{
 		age: 'mixed',
 	}
 ``` 
 ### Adjusting settings
-```js
-function getAddressBlock(parameters = {}) {
-	new ValidParam(parameters, {
-		name: '?string',
-		company_name: '?string',
-		street: 'string',
-		street_2: '?string',
-		city: 'string',
-		state: 'string',
-		zip: 'string|number',
-	})
-
-	return `${name}<br>${company_name}<br>${street}<br>${street_2}<br>${city}, ${state} ${zip}`
-}
-```
+Settings 
