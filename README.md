@@ -69,5 +69,5 @@ If parameter can be of any type, including `null`, programmer may use the `mixed
 		age: 'mixed',
 	}
 ``` 
-### Adjusting settings
-Settings 
+## Contribute
+Pull requests are welcomed to this project
