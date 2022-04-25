@@ -1,5 +1,5 @@
 # valid-param.js
-> Convenient method of validating function parameters when passed as properties of an object (object literal).
+> A convenient approach to validating object properties in javascript. This method was built with an emphasis on validating function parameters passed as an object (object literal syntax).
 
 ## Installation
 ### NPM
@@ -13,7 +13,7 @@ npm install valid-param.js
 1. Download valid-param.min.js
 2. Add to your site with `<script>`
 ### Tip
-valid-param.js was designed with the intent of validating function parameters passed as properties of an object, but really can be used to validate properties of any object.
+valid-param.js was designed with the intent of validating function parameters passed as properties of an object, but can be used to validate properties of any object.
 ## Use
 Simply call the `ValidParam` class and pass in the parameters object as the first argument, along with a 'type assignment' object as the second argument. The 'type assignment' object associates each expected parameter with an acceptable type. If any parameter value is passed with an incorrect type, the appropriate error is thrown.
 ```js
