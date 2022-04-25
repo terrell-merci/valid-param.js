@@ -3,16 +3,30 @@ import { throwRequiredParamError, throwTypeError } from './errors.js'
 /**
  * Validates parameters against a given object of valid types. Throws relevant error if parameter is invalid
  * @param {object} parameters 
- * @param {object} valid_types <parameter_name: valid_type>
+ * @param {object} type_assignment <parameter_name: valid_type>
  */
 export default class {
-	constructor(parameters, valid_types) {
-		for (const key in valid_types) {
-			let value = parameters[key]
+	constructor(parameters, type_assignment) {
+		if (!isObject(parameters))
+			throwTypeError('parameters', 'object')
+
+		if (!isObject(parameters))
+			throwTypeError('type_assignment', 'object')
+
+		this.params = parameters
+
+		this.assignments = type_assignment
+
+		this.validate()
+	}
+
+	validate() {
+		for (const key in this.assignments) {
+			let value = this.params[key]
 
 			let type = typeof value
 
-			let string = valid_types[key]
+			let string = this.assignments[key]
 
 			if (!string)
 				string = 'null'
@@ -30,6 +44,8 @@ export default class {
 		}
 	}
 }
+
+const isObject = (obj) => Object.prototype.toString.call(obj) === '[object Object]'
 
 function isNullable(str) {
 	return str.charAt(0) == '?' || str.includes('null')
