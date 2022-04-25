@@ -64,7 +64,7 @@ function capitalizeFirstLetter(str) {
 }
 
 function isValid(str, types) {
-	const available_types = [
+	const assignable_types = [
 		['string', 'str'],
 		['number', 'num', 'int'],
 		['boolean', 'bool'],
@@ -77,7 +77,7 @@ function isValid(str, types) {
 	let bool = false
 
 	types.forEach(function (type) {
-		available_types.forEach(function (variations) {
+		assignable_types.forEach(function (variations) {
 			variations.forEach(function (variation) {
 				if (type == variation) {
 					if (eval(`is${capitalizeFirstLetter(variations[0])}(str)`))
