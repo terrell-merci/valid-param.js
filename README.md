@@ -68,6 +68,13 @@ If parameter can be of any type, including `null`, programmer may use the `mixed
 	{
 		age: 'mixed',
 	}
-``` 
+```
+#### Assignable Types:
+- `string` (can also write `str`)
+- `number`
+- `boolean` (can also write `bool`)
+- `array`
+- `object` (can also write `obj`)
+
 ## Contribute
 Pull requests are welcomed to this project
