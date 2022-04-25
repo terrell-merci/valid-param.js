@@ -26,7 +26,7 @@ export default class {
 
 			let type = typeof value
 
-			let string = this.assignments[key]
+			let string = this.assignments[key].toLowerCase()
 
 			if (!string)
 				string = 'null'
