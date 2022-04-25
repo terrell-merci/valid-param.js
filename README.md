@@ -70,11 +70,11 @@ If parameter can be of any type, including `null`, programmer may use the `mixed
 	}
 ```
 #### Assignable Types:
-- `string` (can also write `str`)
-- `number`
-- `boolean` (can also write `bool`)
-- `array`
-- `object` (can also write `obj`)
+- `string` (or `str`)
+- `number` (or `num`,`int`)
+- `boolean` (or `bool`)
+- `array` (or `arr`)
+- `object` (or `obj`)
 
 ## Contribute
 Pull requests are welcomed to this project
