@@ -45,8 +45,6 @@ export default class {
 	}
 }
 
-const isObject = (obj) => Object.prototype.toString.call(obj) === '[object Object]'
-
 function isNullable(str) {
 	return str.charAt(0) == '?' || str.includes('null')
 }
@@ -61,19 +59,45 @@ function handleNull(str) {
 	return str
 }
 
+function capitalizeFirstLetter(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function isValid(str, types) {
+	const available_types = [
+		['string', 'str'],
+		['number', 'num', 'int'],
+		['boolean', 'bool'],
+		['array', 'arr'],
+		['object', 'obj'],
+		['null', 'undefined'],
+	]
+
 	let bool = false
 
 	types.forEach(function (type) {
-		if (type == 'null' && (typeof str === 'null' || typeof str === 'undefined')) {
-			bool = true
-
-			return
-		}
-
-		if (typeof str === type)
-			bool = true
+		available_types.forEach(function (variations) {
+			variations.forEach(function (variation) {
+				if (type == variation) {
+					if (eval(`is${capitalizeFirstLetter(variations[0])}(str)`))
+						bool = true
+				}
+			})
+		})
 	})
 
 	return bool
 }
+
+const isString = (value) => typeof value === "string"
+
+const isNumber = (value) => typeof value === "number"
+
+const isBoolean = (value) => typeof value === "boolean"
+
+const isArray = (value) => Array.isArray(value)
+
+const isObject = (value) => Object.prototype.toString.call(value) === '[object Object]'
+
+const isNull = (value) => !value || typeof value === 'undefined'
+
