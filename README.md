@@ -17,12 +17,19 @@ valid-param.js was designed with the intent of validating function parameters pa
 ## Use
 Simply call the `ValidParam` class and pass in the parameters object as the first argument, along with a 'type assignment' object as the second argument. The 'type assignment' object associates each expected parameter with an acceptable type. If any parameter value is passed with an incorrect type, the appropriate error is thrown.
 ```js
+new ValidParam(parameters, {
+	name: 'string',
+	age: 'number',
+})	
+```
+The class is best used as the first bit of logic inside the function or method.
+```js
 function getProfileBlock(parameters = {}) {
 	new ValidParam(parameters, {
 		name: 'string',
 		age: 'number',
 	})
-
+	
 	return `${name}<br>${age}`
 }	
 ```
