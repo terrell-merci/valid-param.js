@@ -63,7 +63,7 @@ A parameter can be made nullable by simply adding the `null` type to the assignm
 		age: 'string|number|null',
 	}
 ```
-If there is only a single acceptable type, then simply add `?` at the beginning of the string.
+If there is only a single acceptable type, then you can simply add `?` at the beginning of the string.
 ```js
 	{
 		age: '?string',
